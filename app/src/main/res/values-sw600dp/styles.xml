@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="login_and_signu_up_root_element">
+        <item name="android:background">@color/colorBackgroundLight</item>
+    </style>
+
+    <style name="Theme.Search" parent="@style/Theme.AppCompat.DayNight.Dialog">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="search_activity">
+        <item name="android:background">@color/gray</item>
+    </style>
+</resources>

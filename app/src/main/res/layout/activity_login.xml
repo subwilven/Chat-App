@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/login_and_signu_up_root_element"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:paddingBottom="@dimen/login_root_layout_padding"
+    android:paddingTop="@dimen/login_root_layout_padding">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="@dimen/login_layout_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_login_and_signup"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        tools:context=".login.view.LoginActivity">
+
+        <!-- Login progress -->
+        <ProgressBar
+            android:id="@+id/login_progress_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:visibility="invisible" />
+
+
+        <EditText
+            android:id="@+id/login_et_email"
+            style="@style/registeration_edit_text"
+            android:layout_width="0dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            android:background="@drawable/edit_text_white"
+            android:hint="@string/login_et_hint_email"
+            android:maxLength="@integer/et_email_max_length"
+            android:inputType="textEmailAddress"
+            app:layout_constraintBottom_toTopOf="@+id/login_et_password"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.75"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <EditText
+            android:id="@+id/login_et_password"
+            style="@style/registeration_edit_text"
+            android:layout_width="0dp"
+            android:layout_marginTop="16dp"
+            android:hint="@string/login_et_hint_password"
+
+            android:maxLength="@integer/et_password_max_length"
+            android:inputType="textPassword"
+            app:layout_constraintBottom_toTopOf="@+id/login_btn_login"
+            app:layout_constraintEnd_toEndOf="@+id/login_et_email"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/login_et_email"
+            app:layout_constraintTop_toBottomOf="@+id/login_et_email" />
+
+
+        <Button
+            android:id="@+id/login_btn_login"
+            style="@style/registeration_light_button"
+            android:layout_width="0dp"
+            android:layout_marginBottom="64dp"
+            android:text="@string/login_btn_login"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/login_et_password"
+            app:layout_constraintStart_toStartOf="@+id/login_et_password" />
+
+        <Button
+            android:id="@+id/login_tv_sign_up"
+            style="@style/registeration_dark_button"
+            android:layout_width="0dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/login_tv_sign_up"
+            app:layout_constraintEnd_toEndOf="@+id/login_btn_login"
+            app:layout_constraintStart_toStartOf="@+id/login_btn_login"
+            app:layout_constraintTop_toBottomOf="@+id/login_btn_login" />
+
+        <TextView
+            style="@style/registeration_text_view_app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/login_et_email"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

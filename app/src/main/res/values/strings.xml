@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">ChatApp</string>
+    <string name="error_no_internet_connection">There is no internet connection</string>
+    <string name="error_no_results">No Results found</string>
+    <string name="sign_up_error_weak_password">Password should be at least 6 characters</string>
+    <string name="sign_up_error_email_used">This email address is already used</string>
+    <string name="sign_up_error_email_invalid">This email address is invalid</string>
+    <string name="sign_up_error_empty_field">This field is required</string>
+    <string name="sign_up_error_default">Something went wrong</string>
+    <string name="sign_up_error_name_short">This name is too short</string>
+    <string name="sign_up_et_hint_username">Name</string>
+    <string name="sign_up_et_hint_email">Email</string>
+    <string name="sign_up_et_hint_password">Password</string>
+    <string name="sign_up_btn_sign_up_text">Sign Up</string>
+    <string name="sign_up_btn_have_acc_text">Have an account</string>
+    <string name="sign_up_toast_text">Registered Successfully</string>
+    <string name="login_btn_login">Login</string>
+    <string name="login_error_email_not_registered">This email address is not registered</string>
+    <string name="login_error_password_incorrect">This password is incorrect</string>
+    <string name="login_et_hint_email">Email</string>
+    <string name="login_et_hint_password">Password</string>
+    <string name="user_search_toast_isArdyFriend">You are already friends</string>
+    <string name="user_search_toast_add_friend">Now you are friends</string>
+    <string name="user_search_item_btn_text">Add</string>
+    <string name="user_search_et_hint">Type your friend name</string>
+    <string name="chat_et_hint">write your message…</string>
+    <string name="contacts_tv_default_last_message">Say hello to your new Friend</string>
+    <string name="contacts_tv_no_friends">Start to Search\nAdd your friends\nStart enjoying</string>
+    <string name="message_tv_first_message">Send your first Message</string>
+    <string name="login_tv_sign_up">Sign Up</string>
+    <string name="no_connection_btn_text">Reload</string>
+    <string name="widget_no_results">No Friends Found</string>
+    <string name="menu_logout">Logout</string>
+    <string name="menu_search">Search</string>
+    <string name="contacts_firest_layout_title">Welcome to ChatApp</string>
+    <string name="contacts_firest_layout_body">Just getting started ? let\'s search and find your friends and start CHATTING</string>
+    <string name="contacts_firest_layout_btn_text">Search</string>
+    <string name="contentDescription_no_signal">No signal</string>
+    <string name="contentDescription_search_icon">Search_icon</string>
+    <string name="contentDescription_chat_now">Chat now</string>
+    <string name="contentDescription_delete_photo">Delete Profile Photo</string>
+    <string name="contentDescription_add">Add Profile Photo</string>
+    <string name="contentDescription_profile">Profile photo</string>
+    <string name="contentDescription_send">Send Message</string>
+    <string name="contentDescription_search_item_photo">User Profile Photo</string>
+    <string name="contentDescription_search_item_btn">Add user</string>
+
+
+</resources>

@@ -1,0 +1,10 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <dimen name="login_root_layout_padding">0dp</dimen>
+    <dimen name="login_layout_width">@dimen/match_parent</dimen>
+    <dimen name="messages_horizontal_padding">0dp</dimen>
+    <dimen name="user_search_et_search_height">35dp</dimen>
+    <dimen name="user_search_et_search_margin_end">16dp</dimen>
+    <dimen name="message_max_width">280dp</dimen>
+</resources>

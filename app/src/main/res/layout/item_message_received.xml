@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:padding="6dp"
+    android:layout_marginStart="@dimen/messages_horizontal_padding"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/contact_tv_last_message_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        style="@style/message_text_view_body"
+        android:background="@drawable/message_recieved_background"
+        tools:text="hi man, how are you?"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/message_tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        tools:text="11:40"
+        style="@style/message_text_view_time"
+        app:layout_constraintBottom_toBottomOf="@+id/contact_tv_last_message_body"
+        app:layout_constraintLeft_toRightOf="@+id/contact_tv_last_message_body" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="login_and_signu_up_root_element">
+        <item name="android:background">@color/colorBackgroundLight</item>
+        <item name="android:elevation">8dp</item>
+
+    </style>
+</resources>

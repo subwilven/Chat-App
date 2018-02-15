@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="login_root_layout_padding">50dp</dimen>
+    <dimen name="login_layout_width">350dp</dimen>
+    <dimen name="messages_horizontal_padding">50dp</dimen>
+    <dimen name="user_search_et_search_height">45dp</dimen>
+    <dimen name="user_search_et_search_margin_end">0dp</dimen>
+    <dimen name="message_max_width">380dp</dimen>
+</resources>

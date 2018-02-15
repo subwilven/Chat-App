@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:contentDescription="@string/contentDescription_no_signal"
+        app:srcCompat="@drawable/ic_no_signal_black_24dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:text="@string/error_no_internet_connection"
+        android:textSize="22sp" />
+
+
+    <Button
+        android:id="@+id/btn_reload"
+        android:layout_width="wrap_content"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:background="@drawable/btn_color_primary"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:text="@string/no_connection_btn_text"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+</LinearLayout>
