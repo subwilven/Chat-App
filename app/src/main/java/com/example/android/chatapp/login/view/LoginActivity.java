@@ -13,12 +13,14 @@ import android.widget.Toast;
 
 import com.example.android.chatapp.R;
 import com.example.android.chatapp.Utility;
-import com.example.android.chatapp.login.model.LoginInteractorImp;
+import com.example.android.chatapp.login.di.DaggerLoginComponent;
+import com.example.android.chatapp.login.di.LoginModel;
 import com.example.android.chatapp.login.presenter.LoginPresenter;
-import com.example.android.chatapp.login.presenter.LoginPresenterImp;
 import com.example.android.chatapp.message.view.MainActivity;
 import com.example.android.chatapp.signUp.view.SignUpActivity;
 import com.google.firebase.auth.FirebaseAuth;
+
+import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -40,7 +42,8 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
     @BindView(R.id.login_tv_sign_up)
     Button goToSignUpTextView;
 
-    private LoginPresenter loginPresenter;
+    @Inject
+    LoginPresenter loginPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +63,8 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
         emailEditText.setOnFocusChangeListener(onFocusChangeListener);
         passwordEditText.setOnFocusChangeListener(onFocusChangeListener);
         // Set up the login form.
-        loginPresenter = new LoginPresenterImp(this, new LoginInteractorImp());
+
+        loginPresenter=DaggerLoginComponent.builder().loginModel(new LoginModel(this)).build().getPresenter();
         loginPresenter.checkIfUserLogin();
         loginButton.setOnClickListener(new OnClickListener() {
             @Override

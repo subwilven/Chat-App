@@ -3,6 +3,8 @@ package com.example.android.chatapp.login.presenter;
 import com.example.android.chatapp.login.model.LoginInteractor;
 import com.example.android.chatapp.login.view.LoginView;
 
+import javax.inject.Inject;
+
 /**
  * Created by eslam on 02-Jan-18.
  */
@@ -12,7 +14,7 @@ LoginPresenterImp implements LoginPresenter, LoginInteractor.OnLoginFinishedList
 
     private final LoginView loginView;
     private final LoginInteractor loginInteractor;
-
+    @Inject
     public LoginPresenterImp(LoginView loginView, LoginInteractor loginInteractor) {
         this.loginView = loginView;
         this.loginInteractor = loginInteractor;

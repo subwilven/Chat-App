@@ -9,13 +9,16 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import javax.inject.Inject;
+
 /**
  * Created by eslam on 02-Jan-18.
  */
 
 public class LoginInteractorImp implements LoginInteractor {
     public final String TAG = "LoginInteractorImp";
-
+    @Inject
+    public LoginInteractorImp(){};
     @Override
     public void signIn(String email, String password, final OnLoginFinishedListener listener) {
         LoginTask loginTask = new LoginTask(listener, email, password);
