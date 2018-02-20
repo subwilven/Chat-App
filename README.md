@@ -11,6 +11,7 @@ Android App built from scratch to be submitted as the FINAL project at Udacity A
 ![Screenshot](https://github.com/subwilven/Chat-App/blob/master/screenshots/tablet_search.PNG)
 
 # Libraries
+ * [Dagger 2](https://github.com/google/dagger)
  * [Butterknife](https://github.com/JakeWharton/butterknife)
  * [Picasso](https://github.com/square/picasso)
  * [CircleImageView](https://github.com/hdodenhof/CircleImageView)
