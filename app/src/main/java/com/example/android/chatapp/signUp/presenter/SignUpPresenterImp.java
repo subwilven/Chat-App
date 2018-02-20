@@ -9,6 +9,8 @@ import com.example.android.chatapp.signUp.view.SignUpView;
 
 import java.io.IOException;
 
+import javax.inject.Inject;
+
 /**
  * Created by eslam on 31-Dec-17.
  */
@@ -19,6 +21,7 @@ public class SignUpPresenterImp implements SignUpPresenter, SignUpInteractor.OnS
     private final SignUpView signUpView;
     private final SignUpInteractor signUpInteractor;
 
+    @Inject
     public SignUpPresenterImp(SignUpView signUpView, SignUpInteractor signUpInteractor) {
         this.signUpView = signUpView;
         this.signUpInteractor = signUpInteractor;

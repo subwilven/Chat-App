@@ -21,12 +21,18 @@ import com.google.firebase.storage.UploadTask;
 
 import java.io.ByteArrayOutputStream;
 
+import javax.inject.Inject;
+
 /**
  * Created by eslam on 31-Dec-17.
  */
 
 public class SignUpInteractorImp implements SignUpInteractor {
+    @Inject
+    public  SignUpInteractorImp()
+    {
 
+    }
     @Override
     public void signUp(String username, String email, String password, Bitmap bitmap, final OnSignUpFinishedListener listener) {
         SignUpTask signUpTask = new SignUpTask(listener, email, username, password, bitmap);

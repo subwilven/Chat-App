@@ -23,11 +23,13 @@ import android.widget.Toast;
 import com.example.android.chatapp.R;
 import com.example.android.chatapp.Utility;
 import com.example.android.chatapp.login.view.LoginActivity;
-import com.example.android.chatapp.signUp.model.SignUpInteractorImp;
+import com.example.android.chatapp.signUp.di.DaggerSignUpComponent;
+import com.example.android.chatapp.signUp.di.SignUpModule;
 import com.example.android.chatapp.signUp.presenter.SignUpPresenter;
-import com.example.android.chatapp.signUp.presenter.SignUpPresenterImp;
 
 import java.io.IOException;
+
+import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -55,7 +57,9 @@ public class SignUpActivity extends AppCompatActivity implements SignUpView, Vie
     @BindView(R.id.sign_up_iv_delete)
     ImageView deleteImageView;
 
-    private SignUpPresenter presenter;
+    @Inject
+    SignUpPresenter presenter;
+
     private boolean thereIsFocusView;
     private final String BUNDLE_PHOTO_URI = "photo_uri";
 
@@ -105,13 +109,15 @@ public class SignUpActivity extends AppCompatActivity implements SignUpView, Vie
                 }
             }
         });
+        DaggerSignUpComponent.builder()
+                .signUpModule(new SignUpModule(this))
+                .build();
         deleteImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 presenter.deletePhoto();
             }
         });
-        presenter = new SignUpPresenterImp(this, new SignUpInteractorImp());
         if (savedInstanceState != null) {
             photoUri = Uri.parse(savedInstanceState.getString(BUNDLE_PHOTO_URI));
             try {
