@@ -109,9 +109,9 @@ public class SignUpActivity extends AppCompatActivity implements SignUpView, Vie
                 }
             }
         });
-        DaggerSignUpComponent.builder()
+        presenter=DaggerSignUpComponent.builder()
                 .signUpModule(new SignUpModule(this))
-                .build();
+                .build().getPresenter();
         deleteImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

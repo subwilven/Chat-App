@@ -1,6 +1,5 @@
 package com.example.android.chatapp.signUp.di;
 
-import com.example.android.chatapp.signUp.model.SignUpInteractorImp;
 import com.example.android.chatapp.signUp.presenter.SignUpPresenterImp;
 
 import dagger.Component;
@@ -10,7 +9,6 @@ import dagger.Component;
  */
 @Component(modules =SignUpModule.class)
 public interface SignUpComponent {
-    SignUpInteractorImp getInteractor();
     SignUpPresenterImp getPresenter();
 }
 
